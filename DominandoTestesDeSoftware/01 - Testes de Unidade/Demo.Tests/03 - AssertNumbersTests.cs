@@ -22,10 +22,10 @@ namespace Demo.Tests
             var calculadora = new Calculadora();
 
             // Act
-            var result = calculadora.Somar(1.13123123123, 2.2312313123);
+            var result = calculadora.Somar(1, 2);
 
             // Assert
-            Assert.NotEqual(3.3, result,1);
+            Assert.Equal(expected: 3, actual: result, precision: 1);
         }
     }
 }

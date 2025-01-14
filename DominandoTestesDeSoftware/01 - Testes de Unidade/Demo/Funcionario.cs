@@ -24,9 +24,13 @@
             if(salario < 500) throw new Exception("Salario inferior ao permitido");
 
             Salario = salario;
-            if (salario < 2000) NivelProfissional = NivelProfissional.Junior;
-            else if (salario >= 2000 && salario < 8000) NivelProfissional = NivelProfissional.Pleno;
-            else if (salario >= 8000) NivelProfissional = NivelProfissional.Senior;
+            NivelProfissional = salario switch
+            {
+                < 2000 => NivelProfissional.Junior,
+                >= 2000 and < 8000 => NivelProfissional.Pleno,
+                >= 8000 => NivelProfissional.Senior,
+                _ => NivelProfissional
+            };
         }
 
         private void DefinirHabilidades()
