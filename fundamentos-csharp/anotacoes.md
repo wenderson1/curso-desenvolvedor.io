@@ -510,3 +510,41 @@ Neste exemplo:
 - Após a execução do bloco, a condição i < 5 é verificada. Se for verdadeira, o bloco é executado novamente.
 
 A principal diferença entre while e do while é que do while garante que o bloco de código seja executado pelo menos uma vez, enquanto while pode não executar o bloco de código se a condição inicial for falsa.
+
+#### Break / Continue
+
+Os comandos `break` e `continue` são usados para controlar o fluxo de loops em C#.
+
+###### Break
+
+O comando `break` é usado para sair imediatamente de um loop, interrompendo sua execução.
+
+```csharp
+for (int i = 0; i < 10; i++)
+{
+    if (i == 5)
+    {
+        break; // Sai do loop quando i é igual a 5
+    }
+    Console.WriteLine(i);
+}
+```
+
+Neste exemplo, o loop `for` será interrompido quando `i` for igual a 5, e os números de 0 a 4 serão impressos.
+
+###### Continue
+
+O comando `continue` é usado para pular a iteração atual do loop e continuar com a próxima iteração.
+
+```csharp
+for (int i = 0; i < 10; i++)
+{
+    if (i % 2 == 0)
+    {
+        continue; // Pula a iteração atual se i for par
+    }
+    Console.WriteLine(i);
+}
+```
+
+Neste exemplo, o loop `for` pulará a impressão dos números pares e imprimirá apenas os números ímpares de 0 a 9.
